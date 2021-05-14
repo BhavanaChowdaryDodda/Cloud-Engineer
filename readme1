@@ -1,0 +1,11 @@
+Run the below commands to prepare the environment:
+
+yum install pip
+pip install PyYAML
+pip install boto3
+pip install paramiko
+
+Provide the key_pair ,aws_access_key_id , aws_secret_access_key and path_pem in assignment.yaml file and run the script.
+
+ssh -i /tmp/assignment.pem user1@54.209.154.217
+

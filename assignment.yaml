@@ -1,0 +1,30 @@
+---
+  # This YAML configuration specifies a server with two volumes and two users
+  server:
+    instance_type: t2.micro
+    Image_Id: ami-0d5eff06f840b45e9
+    key_pair: assignment
+    architecture: x86_64
+    root_device_type: ebs
+    virtualization_type: hvm
+    region_name: us-east-1
+    aws_access_key_id: 
+    aws_secret_access_key: 
+    availability_zone: us-east-1a
+    path_pem: /tmp/assignment.pem
+    min_count: 1
+    max_count: 1
+    volumes:
+      - device: /dev/xvda
+        size_gb: 10
+        type: ext4
+        mount: /
+      - device: /dev/xvdf
+        size_gb: 100
+        type: xfs
+        mount: /data
+    users:
+      - login: user1
+        ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSUccFKLXdoqyQcU3WTmJi0SW89Gsw+jM0QewUhfINdU7ozFYCABpdal2DEp0wy+XZ1viZzSkEJF6r9sOYen8oazG+6B7aMyLFP4QemLvCmYzVYsOfTDrZ+3zrFW3rCykXEcdKL7N+NyiJOHLhujJgWe3zFy0ocgDin+aWSSDBBTNMrnxlnlyAbWqpVa7lCBFOcQBJfCW/g09qq5WTg5NJoKwa6xyvYeh2hsYIiqiWp5pkfeHVWdeTbi7oBcvReUXDmXd1L04mInK3pKL0+q8qZYrpL0AVJAW2EqOSqn79UzmD+7nyEJfm/TqogyrGRcWOdPgw+PK4HI2JdyL2Zy3j
+      - login: user2
+        ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSUccFKLXdoqyQcU3WTmJi0SW89Gsw+jM0QewUhfINdU7ozFYCABpdal2DEp0wy+XZ1viZzSkEJF6r9sOYen8oazG+6B7aMyLFP4QemLvCmYzVYsOfTDrZ+3zrFW3rCykXEcdKL7N+NyiJOHLhujJgWe3zFy0ocgDin+aWSSDBBTNMrnxlnlyAbWqpVa7lCBFOcQBJfCW/g09qq5WTg5NJoKwa6xyvYeh2hsYIiqiWp5pkfeHVWdeTbi7oBcvReUXDmXd1L04mInK3pKL0+q8qZYrpL0AVJAW2EqOSqn79UzmD+7nyEJfm/TqogyrGRcWOdPgw+PK4HI2JdyL2Zy3j
