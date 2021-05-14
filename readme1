@@ -5,7 +5,16 @@ pip install PyYAML
 pip install boto3
 pip install paramiko
 
-Provide the key_pair ,aws_access_key_id , aws_secret_access_key and path_pem in assignment.yaml file and run the script.
+In the assignment.yaml file provide your details for the following variables
+key_pair - the name of the key pair that you have created. FOllow the instructions in the https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html to create a keypair.
+aws_access_key_id - give your access key ID. Follow the instructions in the https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html to get your ID.
+aws_secret_access_key - Give your secret access key. Follow the instructions in the https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html to get they key.
+path_pem - when you create a key pair it will be downloaded in your PC by the browser. Provide the path of the .pem file here.
+and run the script test.py.
+The command to run the test.py is "python test.py"
 
-ssh -i /tmp/assignment.pem user1@54.209.154.217
+To ssh into the instance that is been created please execute the below command.
+ssh -i /tmp/assignment.pem user1@yourIP
+
+you can get the IP in AWS EC2 after the python code is executed.
 
